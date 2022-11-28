@@ -83,7 +83,7 @@ flutter:
     - family: SM
       fonts:
         - asset: assets/fonts/ShabnamMedium.ttf
-          weight: 400
+          weight: 700
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

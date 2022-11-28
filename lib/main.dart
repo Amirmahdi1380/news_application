@@ -17,7 +17,7 @@ class MyWidget extends StatelessWidget {
         textTheme: TextTheme(
           headline4: TextStyle(
             fontFamily: 'SM',
-            fontSize: 20,
+            //fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
         ),
