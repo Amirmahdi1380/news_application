@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_application/homeNews.dart';
 import 'package:news_application/intro_screen.dart';
+import 'package:news_application/post_screen.dart';
 
 void main() {
   MyWidget myWidget = MyWidget();
@@ -23,7 +24,7 @@ class MyWidget extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: HomeNews(),
+      home: PostScreen(),
     );
   }
 }
