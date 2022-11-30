@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_application/explore_screen.dart';
 import 'package:news_application/homeNews.dart';
 import 'package:news_application/intro_screen.dart';
 import 'package:news_application/post_screen.dart';
@@ -24,7 +25,7 @@ class MyWidget extends StatelessWidget {
         ),
       ),
       debugShowCheckedModeBanner: false,
-      home: PostScreen(),
+      home: ExploreScreen(),
     );
   }
 }

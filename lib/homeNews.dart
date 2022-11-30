@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_application/post_screen.dart';
 
 class HomeNews extends StatefulWidget {
   HomeNews({Key? key}) : super(key: key);
@@ -450,15 +451,24 @@ class _HomeNewsState extends State<HomeNews>
   }
 
   Widget getListBuildNewsType1() {
-    return SizedBox(
+    return Container(
       height: 300,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemCount: 10,
         itemBuilder: (context, index) {
-          return Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24),
-            child: getContainerNewsType1(),
+          return GestureDetector(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 22),
+              child: getContainerNewsType1(),
+            ),
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => PostScreen(),
+                ),
+              );
+            },
           );
         },
       ),
