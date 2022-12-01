@@ -10,8 +10,8 @@ class HomeNews extends StatefulWidget {
 
 class _HomeNewsState extends State<HomeNews>
     with SingleTickerProviderStateMixin {
-  TabController? _tabController;
-  int isTouched = 0;
+ TabController? _tabController;
+  int isTouched = 0; 
   @override
   void initState() {
     _tabController = TabController(length: 2, vsync: this);
