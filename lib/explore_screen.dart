@@ -35,17 +35,19 @@ class _ExploreScreenState extends State<ExploreScreen>
       body: DefaultTabController(
         length: 5, // length of tabs
         //initialIndex: 0,
-        child: Column(
-          //crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: <Widget>[
-            getBanner1(),
-            SizedBox(
-              height: 32,
-            ),
-            //getBanner(),
-            getTabBar(),
-            getTabBarView()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            //crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              getBanner1(),
+              SizedBox(
+                height: 32,
+              ),
+              //getBanner(),
+              getTabBar(),
+              getTabBarView()
+            ],
+          ),
         ),
       ),
     );
@@ -53,48 +55,272 @@ class _ExploreScreenState extends State<ExploreScreen>
 
   Container getTabBarView() {
     return Container(
-      height: 400, //height of TabBarView
+      height: 500, //height of TabBarView
       child: TabBarView(
         controller: _tabController,
         children: <Widget>[
           Container(
-            child: Center(
-              child: Text(
-                'Display Tab 1',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'مشاهده بیشتر',
+                          style: TextStyle(
+                            color: Color(0xffFF033E),
+                            fontFamily: 'SM',
+                          ),
+                        ),
+                        Text(
+                          'خبرگزاری ها',
+                          style: TextStyle(
+                            fontFamily: 'Sm',
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  getListFollow(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'مشاهده بیشتر',
+                          style: TextStyle(
+                            color: Color(0xffFF033E),
+                            fontFamily: 'SM',
+                          ),
+                        ),
+                        Text(
+                          'پیشنهاد سردبیر',
+                          style: TextStyle(
+                            fontFamily: 'Sm',
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  getListBanner()
+                ],
               ),
             ),
           ),
           Container(
-            child: Center(
-              child: Text(
-                'Display Tab 2',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'مشاهده بیشتر',
+                          style: TextStyle(
+                            color: Color(0xffFF033E),
+                            fontFamily: 'SM',
+                          ),
+                        ),
+                        Text(
+                          'خبرگزاری ها',
+                          style: TextStyle(
+                            fontFamily: 'Sm',
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  getListFollow(),
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          'مشاهده بیشتر',
+                          style: TextStyle(
+                            color: Color(0xffFF033E),
+                            fontFamily: 'SM',
+                          ),
+                        ),
+                        Text(
+                          'پیشنهاد سردبیر',
+                          style: TextStyle(
+                            fontFamily: 'Sm',
+                            fontSize: 16,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  getListBanner()
+                ],
               ),
             ),
           ),
           Container(
-            child: Center(
-              child: Text(
-                'Display Tab 3',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'مشاهده بیشتر',
+                        style: TextStyle(
+                          color: Color(0xffFF033E),
+                          fontFamily: 'SM',
+                        ),
+                      ),
+                      Text(
+                        'خبرگزاری ها',
+                        style: TextStyle(
+                          fontFamily: 'Sm',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                getListFollow(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'مشاهده بیشتر',
+                        style: TextStyle(
+                          color: Color(0xffFF033E),
+                          fontFamily: 'SM',
+                        ),
+                      ),
+                      Text(
+                        'پیشنهاد سردبیر',
+                        style: TextStyle(
+                          fontFamily: 'Sm',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                getListBanner()
+              ],
             ),
           ),
           Container(
-            child: Center(
-              child: Text(
-                'Display Tab 4',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'مشاهده بیشتر',
+                        style: TextStyle(
+                          color: Color(0xffFF033E),
+                          fontFamily: 'SM',
+                        ),
+                      ),
+                      Text(
+                        'خبرگزاری ها',
+                        style: TextStyle(
+                          fontFamily: 'Sm',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                getListFollow(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'مشاهده بیشتر',
+                        style: TextStyle(
+                          color: Color(0xffFF033E),
+                          fontFamily: 'SM',
+                        ),
+                      ),
+                      Text(
+                        'پیشنهاد سردبیر',
+                        style: TextStyle(
+                          fontFamily: 'Sm',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                getListBanner()
+              ],
             ),
           ),
           Container(
-            child: Center(
-              child: Text(
-                'Display Tab 5',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-              ),
+            child: Column(
+              children: [
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'مشاهده بیشتر',
+                        style: TextStyle(
+                          color: Color(0xffFF033E),
+                          fontFamily: 'SM',
+                        ),
+                      ),
+                      Text(
+                        'خبرگزاری ها',
+                        style: TextStyle(
+                          fontFamily: 'Sm',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                getListFollow(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'مشاهده بیشتر',
+                        style: TextStyle(
+                          color: Color(0xffFF033E),
+                          fontFamily: 'SM',
+                        ),
+                      ),
+                      Text(
+                        'پیشنهاد سردبیر',
+                        style: TextStyle(
+                          fontFamily: 'Sm',
+                          fontSize: 16,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                getListBanner()
+              ],
             ),
           ),
         ],
@@ -269,6 +495,24 @@ class _ExploreScreenState extends State<ExploreScreen>
             child: containerFolow(),
           );
         },
+      ),
+    );
+  }
+
+  Widget getListBanner() {
+    return SingleChildScrollView(
+      child: Container(
+        height: 150,
+        child: ListView.builder(
+          itemCount: 10,
+          scrollDirection: Axis.horizontal,
+          itemBuilder: (context, index) {
+            return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: getBanner(),
+            );
+          },
+        ),
       ),
     );
   }
